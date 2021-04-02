@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import Progress from "./Progress";
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
 
+import "react-notifications/lib/notifications.css";
 import "./styles.css";
 
 const Imc = () => {
@@ -21,8 +26,9 @@ const Imc = () => {
 
   const handleForm = (e) => {
     e.preventDefault();
-    // if (peso.trim() === "" || estatura.trim() === "") {
-    // }
+    if (!peso || !estatura) {
+      return NotificationManager.error("Todos los campos son obligatorios", "Advertencia!");
+    }
     const convirtiendoEstatura = estatura / 100;
     const resultImc = peso / (convirtiendoEstatura * convirtiendoEstatura);
     setImc(Number(resultImc.toFixed(2)));
@@ -65,6 +71,7 @@ const Imc = () => {
           </div>
         </div>
       </div>
+      <NotificationContainer />
     </div>
   );
 };
