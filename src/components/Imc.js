@@ -37,7 +37,7 @@ const Imc = () => {
   return (
     <div className="container ">
       <div className="Imc">
-        <h1>CALCULA TU IMC</h1>
+        <h1 className='animate__animated animate__fadeInDown'>CALCULA TU IMC</h1>
       </div>
       <div className="cardContainer animate__animated animate__fadeInUp">
         <div className="card">

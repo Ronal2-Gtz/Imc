@@ -1,41 +1,84 @@
 export const calcularComposicionCorporal = (imc) => {
   if (imc < 18.5) {
     return {
-      imcCorporal: "",
+      consejo: `
+        <ul style="list-style:none" >
+          <li >Comer con más frecuencia.</li>
+          <li>Escoger comidas ricas en nutrientes.</li>
+          <li>Tomar batidos y licuados de frutas.</li>
+          <li>Elegir productos lácteos enteros.</li>
+          <li>Cocinar salsas y sopas con leche en lugar de agua.</li>
+          <li>Anotar cuándo y cuánto se bebe.</li>
+        </ul>
+      `,
       imcWidth: 5,
-      color: "",
+      masa: "Bajo Peso",
     };
   }
 
   if (imc > 18.5 && imc < 24.9) {
     return {
-      imcCorporal: "",
+      consejo: `
+        <ul style="list-style:none" >
+          <li>Ejercicio físico. La actividad física regular quema calorías y genera tejido muscular.</li>
+          <li>Reduce el tiempo ante la pantalla.</li>
+          <li>Ten cuidado con las porciones distorsionadas.</li>
+          <li>Come 5 porciones de frutas y verduras por día.</li>
+          <li>No te saltees el desayuno.</li>
+        </ul>
+      `,
       imcWidth: 23,
-      color: "",
+      masa: "Peso Normal",
     };
   }
 
   if (imc > 25 && imc < 29.9) {
     return {
-      imcCorporal: "",
+      consejo: `
+        <ul style="list-style:none" >
+          <li>Falta de actividad física</li>
+          <li>Alimentación inadecuada: exceso en el consumo de alimentos procesados y con alta cantidad de grasa, así como, alta ingesta de refrescos y alcohol.</li>
+          <li>Genética</li>
+          <li>Estilo de vida: el sedentarismo no ayuda a controlar el peso.</li>
+          <li>Algunas enfermedades y medicamentos administrados de forma periódica</li>
+        </ul>
+      `,
       imcWidth: 46,
-      color: "",
+      masa: "Preobesidad",
     };
   }
 
   if (imc > 30 && imc < 34.9) {
     return {
-      imcCorporal: "",
+      consejo: `
+      <ul style="list-style:none" >
+        <li>Alimentación saludable</li>
+        <li>Aumento de la actividad física</li>
+        <li>Terapia conductual</li>
+        <li>Reemplazos de comidas/dietas de baja energía</li>
+        <li>Medicamentos contra la obesidad</li>
+        <li>Cirugía bariátrica</li>
+      </ul>
+      `,
       imcWidth: 69,
-      color: "",
+      masa: "Obesidad 1",
     };
   }
 
   if (imc > 35) {
     return {
-      imcCorporal: "",
+      consejo: `
+        <ul style="list-style:none" >
+          <li>Alimentación saludable</li>
+          <li>Aumento de la actividad física</li>
+          <li>Terapia conductual</li>
+          <li>Reemplazos de comidas/dietas de baja energía</li>
+          <li>Medicamentos contra la obesidad</li>
+          <li>Cirugía bariátrica</li>
+        </ul>
+      `,
       imcWidth: 90,
-      color: "",
+      masa: "Obesidad 2",
     };
   }
 };

@@ -28,7 +28,7 @@
 .card {
   background: white;
   width: 65%;
-  height: 45vh;
+  height: 50vh;
   box-shadow: 0px 0px 34px -16px rgba(0, 0, 0, 0.75);
   max-width: 1000px;
   display: flex;
@@ -98,6 +98,13 @@
   margin-top: 20px;
 }
 
+.progressContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .triangle {
   width: 0;
   height: 0;
@@ -107,4 +114,21 @@
   position: absolute;
   bottom: 22px;
   transition: 1s;
+}
+
+.resultImc{
+  margin:  0px 0px 10px 0;
+}
+
+.button_recomend{
+  background-color: transparent;
+  border: none;
+  color: rgb(156, 156, 156);
+  transition: 0.5s;
+  width: auto;
+  margin-bottom: 0px;
+}
+
+.button_recomend:hover {
+  color: darkblue;
 }
