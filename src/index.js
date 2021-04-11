@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Imc from "./components/Imc"
 import './index.css'
+import App from './routers/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Imc />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
