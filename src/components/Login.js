@@ -1,24 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
+import axios from "axios";
 import { GoogleLogin } from "react-google-login";
 
-const Home = () => {
-  let Storage = window.localStorage;
+const url = "http://localhost:8282/loginGoogle";
 
-  const responseGoogle = (response) => {
-    const id_token = response.tokenObj.id_token;
+const Home = ({ history }) => {
+  const responseGoogle = async (response) => {
+    const idtoken = response.tokenObj.id_token;
+    const { data } = await axios.post(url, {
+      idtoken,
+    });
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:8282/loginGoogle");
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onload = function () {
-      const dataServer = xhr.responseText;
-      const dataUser = JSON.parse(dataServer);
-      if (!dataUser.error) {
-        Storage.setItem("token", dataUser.token);
-        window.location.href = "/imc";
-      }
-    };
-    xhr.send("idtoken=" + id_token);
+    if (!data.error) {
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data));
+      history.push("/imc");
+    }
   };
 
   return (
@@ -39,7 +36,7 @@ const Home = () => {
               onFailure={responseGoogle}
               cookiePolicy={"single_host_origin"}
               className="hola"
-              theme='dark'
+              theme="dark"
               icon={true}
             />
           </div>

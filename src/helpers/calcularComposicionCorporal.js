@@ -1,5 +1,5 @@
 export const calcularComposicionCorporal = (imc) => {
-  if (imc < 18.5) {
+  if (imc < 5) {
     return {
       consejo: `
         <ul style="list-style:none" >
@@ -16,7 +16,7 @@ export const calcularComposicionCorporal = (imc) => {
     };
   }
 
-  if (imc > 18.5 && imc < 24.9) {
+  if (imc >= 5 && imc < 85) {
     return {
       consejo: `
         <ul style="list-style:none" >
@@ -27,12 +27,12 @@ export const calcularComposicionCorporal = (imc) => {
           <li>No te saltees el desayuno.</li>
         </ul>
       `,
-      imcWidth: 23,
+      imcWidth: 30,
       masa: "Peso Normal",
     };
   }
 
-  if (imc > 25 && imc < 29.9) {
+  if (imc >= 85 && imc < 95) {
     return {
       consejo: `
         <ul style="list-style:none" >
@@ -43,12 +43,12 @@ export const calcularComposicionCorporal = (imc) => {
           <li>Algunas enfermedades y medicamentos administrados de forma periódica</li>
         </ul>
       `,
-      imcWidth: 46,
-      masa: "Preobesidad",
+      imcWidth: 59,
+      masa: "Sobrepeso",
     };
   }
 
-  if (imc > 30 && imc < 34.9) {
+  if (imc >= 95) {
     return {
       consejo: `
       <ul style="list-style:none" >
@@ -60,25 +60,8 @@ export const calcularComposicionCorporal = (imc) => {
         <li>Cirugía bariátrica</li>
       </ul>
       `,
-      imcWidth: 69,
-      masa: "Obesidad 1",
-    };
-  }
-
-  if (imc > 35) {
-    return {
-      consejo: `
-        <ul style="list-style:none" >
-          <li>Alimentación saludable</li>
-          <li>Aumento de la actividad física</li>
-          <li>Terapia conductual</li>
-          <li>Reemplazos de comidas/dietas de baja energía</li>
-          <li>Medicamentos contra la obesidad</li>
-          <li>Cirugía bariátrica</li>
-        </ul>
-      `,
-      imcWidth: 90,
-      masa: "Obesidad 2",
+      imcWidth: 87,
+      masa: "Obesidad",
     };
   }
 };

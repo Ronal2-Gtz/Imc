@@ -6,7 +6,7 @@ import withReactContent from "sweetalert2-react-content";
 import { calcularComposicionCorporal } from "../helpers/calcularComposicionCorporal";
 import "./styles.css";
 
-const Progress = ({ imc }) => {
+const Progress = ({ imc, setImc, sendImc, sendData, setSendData}) => {
   const [resp, setResp] = useState({});
   useEffect(() => {
     const result = calcularComposicionCorporal(imc);
@@ -45,17 +45,33 @@ const Progress = ({ imc }) => {
                 style={{ left: `${imcWidth}%` }}
               ></div>
             </div>
-            <span>
-              Bajo Peso - Peso Normal - Preobesidad - Obesidad 1 - Obesidad 2
-            </span>
+            <span>Bajo Peso - Peso Normal - Sobrepeso - Obesidad</span>
 
             <button
               className="card__button button_recomend"
               onClick={handleAlert}
             >
-              {" "}
               Ver recomendaciones
             </button>
+            <div>
+              <button
+                onClick={() => {
+                  setSendData(false)
+                  setImc(0)
+                }}
+                className="card__button btn__progress "
+              >
+                Volver a calcular
+              </button>
+              {!sendData ? (
+                <button
+                  onClick={sendImc}
+                  className="card__button btn__progress "
+                >
+                  Guardar Imc
+                </button>
+              ) : null}
+            </div>
           </div>
         </>
       ) : null}
@@ -65,6 +81,9 @@ const Progress = ({ imc }) => {
 
 Progress.propTypes = {
   imc: PropTypes.number.isRequired,
+  setImc: PropTypes.func.isRequired,
+  sendImc: PropTypes.func.isRequired,
+  sendData: PropTypes.bool.isRequired,
 };
 
 export default Progress;
