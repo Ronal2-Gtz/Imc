@@ -205,6 +205,8 @@ input::placeholder{
   color: white;
   border-bottom: 1px solid #1cb997 ;
   font-family: 'Satisfy', cursive;
+  padding-left: 20px ;
+  padding-right: 200px ;
 }
 .nabvar__items{
   display: flex;
@@ -223,4 +225,31 @@ input::placeholder{
 .nabvar__logo{
   padding: 8px;
 
+}
+
+.close{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  cursor: pointer;
+}
+
+.avatar{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.navbar__elements{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__elements > img{
+  width: 50px;
+  border-radius: 50px;
+  margin-right: 30px;
 }

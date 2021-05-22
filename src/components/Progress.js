@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 
 import { calcularComposicionCorporal } from "../helpers/calcularComposicionCorporal";
 import "./styles.css";

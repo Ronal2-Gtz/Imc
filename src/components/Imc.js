@@ -29,7 +29,7 @@ const Imc = () => {
   const [userData, setUserData] = useState(initialState);
   const [imc, setImc] = useState(0);
   const [sendData, setSendData] = useState(false)
-  const [dataGoogle, setDataGoogle] = useState(getDataUser());
+  const [dataGoogle] = useState(getDataUser());
 
   const { weight, height, name, gender, year } = userData;
 
@@ -67,6 +67,7 @@ const Imc = () => {
 
   return (
     <div className="container ">
+      <Navbar/>
       <div className="Imc">
         <h1 className="animate__animated animate__fadeInDown">
           CALCULA TU IMC
