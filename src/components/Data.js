@@ -1,21 +1,13 @@
-import React, { useEffect } from 'react'
-import c3 from "c3";
+import React from "react";
+import Navbar from "./Navbar";
+import { Estadisticas } from "./Estadisticas";
 
 export const Data = () => {
-
-    useEffect(() => {
-        c3.generate({
-            bindto: "#chart",
-            data: {
-              columns: [
-                ["data1", 30, 200, 100, 400, 150, 250, 500,500,500],
-              ],
-              type: "line",
-            },
-          });
-    }, [])
-
-    return (
-        <div id="chart" />
-    )
-}
+  return (
+    <div className="container">
+      <Navbar />
+      <Estadisticas />
+      <Estadisticas />
+    </div>
+  );
+};

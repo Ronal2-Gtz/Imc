@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import iconClose from "../assets/cerrar-sesion.svg";
 
@@ -45,6 +46,7 @@ const Navbar = () => {
         </div>
         <div className="navbar__elements">
           <img src={img} alt="perfil" />
+          <Link className='link' to='/data'>Estadisticas</Link >
           <div className="close" onClick={handleclose}>
             <img className="avatar" alt="avatar" src={iconClose} />
             <spna>Cerrar sesion</spna>
