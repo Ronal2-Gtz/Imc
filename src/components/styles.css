@@ -15,6 +15,15 @@
   align-items: center;
   font-family: 'PT Sans', sans-serif;
 }
+.Imc2 {
+  background: #0fefbd;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT Sans', sans-serif;
+}
 
 .Imc > h1 {
   color: white;
@@ -257,11 +266,52 @@ input::placeholder{
   list-style: none;
   margin-right: 30px;
   font-size: 20px;
+  color: #000;
 }
+
+/* DATA */
 
 #chart{
   margin-top: 200px;
   background-color: transparent;
 }
 
-.estadisticas{}
+.estadisticas{
+  display: flex;
+  justify-content: center;
+}
+
+.c3-event-rect{
+  height: 100%;
+}
+
+#chart{
+  margin-top: 8px;
+
+}
+
+.container__tabla{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.table{
+  width: 80vw;
+  margin-bottom: 1rem;
+  border-color: white; 
+}
+.table__head{
+  background-color: #0fefbd;
+
+}
+.table__datos{
+  text-align: center;
+}
+
+td{
+  border-bottom: #000 solid 2px;
+  
+}
+

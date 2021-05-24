@@ -2,19 +2,21 @@ import React, { useEffect, useState } from "react";
 import c3 from "c3";
 import axios from "axios";
 
+
 export const Estadisticas = () => {
   const [userData, setUserData] = useState([]);
   const [imc, setImc] = useState([]);
   const [weight, setWeight] = useState([]);
 
+  
   useEffect(() => {
     const {
       searchUser: { _id },
     } = JSON.parse(localStorage.getItem("user"));
-    getUserData(_id);
+   getUserData(_id);
   }, []);
-
-  const getUserData = async (id) => {
+  
+ const getUserData = async (id) => {
     try {
       const { data } = await axios.get(`http://localhost:8282/imc/${id}`);
       const weight = data.data.map((user) => Number(user.weight)) || [];

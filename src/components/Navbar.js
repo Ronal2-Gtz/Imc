@@ -16,9 +16,7 @@ const Navbar = () => {
       searchUser: { urlImage, name },
     } = JSON.parse(localStorage.getItem("user"));
     setName(name);
-    setTimeout(() => {
-      setImg(urlImage);
-    }, 5000);
+    setImg(urlImage);
   }, []);
 
   const handleclose = () => {
@@ -49,7 +47,7 @@ const Navbar = () => {
           <Link className='link' to='/data'>Estadisticas</Link >
           <div className="close" onClick={handleclose}>
             <img className="avatar" alt="avatar" src={iconClose} />
-            <spna>Cerrar sesion</spna>
+            <span>Cerrar sesion</span>
           </div>
         </div>
       </div>
