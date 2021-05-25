@@ -40,7 +40,9 @@ const Navbar = () => {
     <div className="nabvar">
       <div className="nabvar__items">
         <div className="nabvar__logo">
-          <h1>Tu Imc - {name}</h1>
+          <a href='/imc'>
+            <h1>Tu Imc - {name}</h1>
+          </a>
         </div>
         <div className="navbar__elements">
           <img src={img} alt="perfil" />

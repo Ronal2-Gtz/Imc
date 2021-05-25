@@ -22,7 +22,7 @@ const Home = ({ history }) => {
     <div className="container ">
       <div className="Imc">
         <h1 className="animate__animated animate__fadeInDown">
-          LA APLICACION MAS HPUTA DEL MUNDO
+          INGRESA PARA CONOCER TU IMC
         </h1>
       </div>
       <div className="cardContainer animate__animated animate__fadeInUp">

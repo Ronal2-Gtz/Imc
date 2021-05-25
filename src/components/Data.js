@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { Estadisticas } from "./Estadisticas";
 import moment from 'moment'
-moment.locale('es')
+moment.locale('es');
 
 
 export const Data = () => {

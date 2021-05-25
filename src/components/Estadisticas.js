@@ -8,7 +8,7 @@ export const Estadisticas = () => {
   const [imc, setImc] = useState([]);
   const [weight, setWeight] = useState([]);
 
-  
+  console.log(userData);
   useEffect(() => {
     const {
       searchUser: { _id },

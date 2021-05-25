@@ -230,7 +230,11 @@ input::placeholder{
 
 .nabvar__logo{
   padding: 8px;
-
+  
+}
+.nabvar__logo a{
+  color: white;
+  text-decoration: none;
 }
 
 .close{
