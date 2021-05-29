@@ -48,7 +48,7 @@ const Imc = () => {
         "Advertencia!"
       );
     }
-    const resultImc = calculateImc(Number(height), Number(weight));
+    const resultImc = calculateImc(Number(height), Number(weight), gender);
     setImc(resultImc);
   };
 
@@ -61,6 +61,7 @@ const Imc = () => {
       setSendData(true)
 
     } catch (error) {
+      console.log(error);
 
     }
   };
